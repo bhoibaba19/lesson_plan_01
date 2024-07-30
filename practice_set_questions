@@ -1,1 +1,221 @@
-QUESTIONS FOR PRACTICE : PYTHON
+QUESTIONS FOR PRACTICE: PYTHON
+# For Loop
+
+# 1. Sum of First N Natural Numbers
+def sum_natural_numbers():
+    N = int(input("Enter a number: "))
+    total = 0
+    for i in range(1, N + 1):
+        total += i
+    print("The sum of the first", N, "natural numbers is:", total)
+
+# 2. Multiplication Table
+def multiplication_table():
+    num = int(input("Enter a number: "))
+    for i in range(1, 11):
+        print(num, 'x', i, '=', num * i)
+
+# 3. Iterate Over a List
+def iterate_list():
+    numbers = [1, 2, 3, 4, 5]
+    for number in numbers:
+        print(number)
+
+# While Loop
+
+# 1. Factorial Calculation
+def factorial():
+    num = int(input("Enter a number: "))
+    factorial = 1
+    while num > 0:
+        factorial *= num
+        num -= 1
+    print("The factorial is:", factorial)
+
+# 2. Guessing Game
+def guessing_game():
+    import random
+    target = random.randint(1, 100)
+    guess = None
+    while guess != target:
+        guess = int(input("Guess the number between 1 and 100: "))
+        if guess < target:
+            print("Too low!")
+        elif guess > target:
+            print("Too high!")
+        else:
+            print("Congratulations! You guessed the right number.")
+
+# 3. Sum of Digits
+def sum_of_digits():
+    num = int(input("Enter a number: "))
+    total = 0
+    while num > 0:
+        total += num % 10
+        num //= 10
+    print("The sum of the digits is:", total)
+
+# If Else
+
+# 1. Odd or Even
+def odd_or_even():
+    num = int(input("Enter a number: "))
+    if num % 2 == 0:
+        print(num, "is even")
+    else:
+        print(num, "is odd")
+
+# 2. Leap Year Check
+def leap_year_check():
+    year = int(input("Enter a year: "))
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print(year, "is a leap year")
+    else:
+        print(year, "is not a leap year")
+
+# 3. Grade Calculation
+def grade_calculation():
+    score = int(input("Enter the score: "))
+    if 90 <= score <= 100:
+        grade = 'A'
+    elif 80 <= score < 90:
+        grade = 'B'
+    elif 70 <= score < 80:
+        grade = 'C'
+    elif 60 <= score < 70:
+        grade = 'D'
+    else:
+        grade = 'F'
+    print("The grade is:", grade)
+
+# Set
+
+# 1. Unique Elements
+def unique_elements():
+    numbers = [1, 2, 2, 3, 4, 4, 5]
+    unique_numbers = set(numbers)
+    print("Unique elements:", unique_numbers)
+
+# 2. Set Operations
+def set_operations():
+    set1 = {1, 2, 3}
+    set2 = {2, 3, 4}
+    print("Union:", set1 | set2)
+    print("Intersection:", set1 & set2)
+    print("Difference:", set1 - set2)
+
+# 3. Remove Duplicates
+def remove_duplicates():
+    numbers = [1, 2, 2, 3, 4, 4, 5]
+    unique_numbers = list(set(numbers))
+    print("List after removing duplicates:", unique_numbers)
+
+# Dictionary
+
+# 1. Frequency Count
+def frequency_count():
+    numbers = [1, 2, 2, 3, 4, 4, 5]
+    frequency = {}
+    for number in numbers:
+        if number in frequency:
+            frequency[number] += 1
+        else:
+            frequency[number] = 1
+    print("Frequency of elements:", frequency)
+
+# 2. Phonebook
+def phonebook():
+    phonebook = {}
+    while True:
+        action = input("Enter 'add', 'remove', 'search', or 'quit': ")
+        if action == 'add':
+            name = input("Enter name: ")
+            number = input("Enter number: ")
+            phonebook[name] = number
+        elif action == 'remove':
+            name = input("Enter name: ")
+            if name in phonebook:
+                del phonebook[name]
+            else:
+                print("Name not found")
+        elif action == 'search':
+            name = input("Enter name: ")
+            if name in phonebook:
+                print("Number:", phonebook[name])
+            else:
+                print("Name not found")
+        elif action == 'quit':
+            break
+        else:
+            print("Invalid action")
+
+# 3. Student Grades
+def student_grades():
+    grades = {'Alice': 85, 'Bob': 92, 'Charlie': 78}
+    total = sum(grades.values())
+    average = total / len(grades)
+    print("Average grade:", average)
+
+# List
+
+# 1. List Comprehension
+def list_comprehension():
+    N = int(input("Enter a number: "))
+    squares = [i**2 for i in range(1, N + 1)]
+    print("List of squares:", squares)
+
+# 2. List Reversal
+def list_reversal():
+    numbers = [1, 2, 3, 4, 5]
+    reversed_numbers = numbers[::-1]
+    print("Reversed list:", reversed_numbers)
+
+# 3. Find Maximum
+def find_maximum():
+    numbers = [1, 2, 3, 4, 5]
+    maximum = max(numbers)
+    print("Maximum element:", maximum)
+
+# Tuple
+
+# 1. Tuple Operations
+def tuple_operations():
+    numbers = (1, 2, 3, 4, 5)
+    total = sum(numbers)
+    average = total / len(numbers)
+    print("Sum:", total)
+    print("Average:", average)
+
+# 2. Convert Tuple to List
+def tuple_to_list():
+    numbers = (1, 2, 3, 4, 5)
+    numbers_list = list(numbers)
+    print("Converted list:", numbers_list)
+
+# 3. Access Elements
+def access_elements():
+    numbers = (1, 2, 3, 4, 5)
+    print("Second element:", numbers[1])
+
+# Function calls for testing
+sum_natural_numbers()
+multiplication_table()
+iterate_list()
+factorial()
+guessing_game()
+sum_of_digits()
+odd_or_even()
+leap_year_check()
+grade_calculation()
+unique_elements()
+set_operations()
+remove_duplicates()
+frequency_count()
+phonebook()
+student_grades()
+list_comprehension()
+list_reversal()
+find_maximum()
+tuple_operations()
+tuple_to_list()
+access_elements()
