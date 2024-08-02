@@ -1,0 +1,22 @@
+DATA TYPES 
+int , float , string , boolean , full , undefined , complex
+
+
+
+ ____________________________________________________________
+Comments can be used to explain Python code.
+
+Comments can be used to make the code more readable.
+
+Comments can be used to prevent execution when testing code.
+it is denoted by #   
+-----------------------------------------------------------------
+
+Python divides the operators in the following groups:
+
+    Arithmetic operators
+    Assignment operators
+    Comparison operators
+    Logical operators
+1) Arithmetic operators 
+
